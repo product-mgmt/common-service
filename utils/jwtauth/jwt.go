@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ankeshnirala/order-mgmt/common-service/types"
 	"github.com/golang-jwt/jwt/v4"
+	"github.com/product-mgmt/common-service/types"
 )
 
 var ExpirationTime = time.Now().Add(24 * time.Hour)

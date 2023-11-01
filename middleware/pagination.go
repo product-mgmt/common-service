@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ankeshnirala/order-mgmt/common-service/constants/messages"
-	"github.com/ankeshnirala/order-mgmt/common-service/types"
+	"github.com/product-mgmt/common-service/constants/messages"
+	"github.com/product-mgmt/common-service/types"
 )
 
 func (s *Storage) Pagination(next http.Handler) http.Handler {

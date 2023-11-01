@@ -6,9 +6,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/ankeshnirala/order-mgmt/common-service/constants/messages"
-	"github.com/ankeshnirala/order-mgmt/common-service/storage"
-	"github.com/ankeshnirala/order-mgmt/common-service/utils/commfunc"
+	"github.com/product-mgmt/common-service/constants/messages"
+	"github.com/product-mgmt/common-service/storage"
+	"github.com/product-mgmt/common-service/utils/commfunc"
 )
 
 type Storage struct {

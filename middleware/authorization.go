@@ -10,11 +10,11 @@ import (
 	"github.com/ankeshnirala/sqlscan"
 	"github.com/gorilla/mux"
 
-	"github.com/ankeshnirala/order-mgmt/common-service/constants/messages"
-	"github.com/ankeshnirala/order-mgmt/common-service/constants/procedures"
-	"github.com/ankeshnirala/order-mgmt/common-service/constants/tables"
-	"github.com/ankeshnirala/order-mgmt/common-service/types"
-	"github.com/ankeshnirala/order-mgmt/common-service/utils/commfunc"
+	"github.com/product-mgmt/common-service/constants/messages"
+	"github.com/product-mgmt/common-service/constants/procedures"
+	"github.com/product-mgmt/common-service/constants/tables"
+	"github.com/product-mgmt/common-service/types"
+	"github.com/product-mgmt/common-service/utils/commfunc"
 )
 
 func (s *Storage) Authorization(roles ...string) mux.MiddlewareFunc {
