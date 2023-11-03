@@ -70,6 +70,11 @@ BEGIN
     SET @paramValue = col_value;
     EXECUTE stmt USING @paramValue;
     DEALLOCATE PREPARE stmt;
+
+    SET p_message = 'record deleted successfully';
+
+    -- Return inserted data along with the message
+    SELECT p_message AS message;
 END;
 
 -- SOFT DELETE
@@ -87,4 +92,9 @@ BEGIN
     SET @paramValue = col_value;
     EXECUTE stmt USING @paramValue;
     DEALLOCATE PREPARE stmt;
+
+    SET p_message = 'record deleted successfully';
+
+    -- Return inserted data along with the message
+    SELECT p_message AS message;
 END;

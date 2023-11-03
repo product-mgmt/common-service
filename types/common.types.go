@@ -8,3 +8,8 @@ type Paginate struct {
 	Limit        int
 	Offset       int
 }
+
+type StandardResponse struct {
+	Message    string `json:"message" db:"message"`
+	InsertedID int    `json:"insertedID" db:"insertedID"`
+}

@@ -12,8 +12,9 @@ type ApiError struct {
 }
 
 type StandardResponse struct {
-	Code int         `json:"code"`
-	Data interface{} `json:"data"`
+	Code  int         `json:"code"`
+	Count int         `json:"count"`
+	Data  interface{} `json:"data"`
 }
 
 func WriteJSON(w http.ResponseWriter, status int, v any) error {
@@ -21,8 +22,9 @@ func WriteJSON(w http.ResponseWriter, status int, v any) error {
 	w.WriteHeader(status)
 
 	res := &StandardResponse{
-		Code: status,
-		Data: v,
+		Code:  status,
+		Count: 0,
+		Data:  v,
 	}
 
 	return json.NewEncoder(w).Encode(res)
