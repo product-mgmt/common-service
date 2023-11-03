@@ -2,7 +2,7 @@ package tables
 
 const USERS = "users"
 const ORDERS = "orders"
-const CARTS = "carts"
+const ORDER_ITEM = "order_items"
 const PRODUCTS = "products"
-const CATEGORY = "category"
-const INVENTORY = "inventory"
+const CATEGORY = "product_category;"
+const INVENTORY = "product_inventory"
