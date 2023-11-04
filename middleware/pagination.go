@@ -26,7 +26,7 @@ func (s *Storage) Pagination(next http.Handler) http.Handler {
 		}
 
 		if searchColumn == "" {
-			searchColumn = "name"
+			searchColumn = "id"
 		}
 
 		recordPerPage, err := strconv.Atoi(r.URL.Query().Get("recordPerPage"))

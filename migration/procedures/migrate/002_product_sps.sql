@@ -67,7 +67,7 @@ BEGIN
     DECLARE p_message VARCHAR(255);
 
     -- Check if the record with the specified ID exists
-    IF EXISTS (SELECT 1 FROM products WHERE product_id = p_product_id) THEN
+    IF EXISTS (SELECT 1 FROM product_inventory WHERE product_id = p_product_id) THEN
         -- Record exists, perform the update or delete operation
         -- Record does not exist, send an error message
         SET error_message = CONCAT(p_product_id, ' already exists');
@@ -75,7 +75,7 @@ BEGIN
 
     ELSE
         -- Insert the user data into table
-        INSERT INTO product_inventory (product_id, quantity, sku, category_id, price)
+        INSERT INTO product_inventory (product_id, quantity)
         VALUES (p_product_id, p_quantity);
 
         -- Get the last inserted user ID
