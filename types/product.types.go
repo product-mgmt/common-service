@@ -3,6 +3,7 @@ package types
 import "time"
 
 type ProductCategory struct {
+	ID          int       `json:"id" db:"id"`
 	Name        string    `json:"name" db:"name"`
 	Description string    `json:"description" db:"description"`
 	Status      string    `json:"status" db:"status"`
@@ -23,6 +24,7 @@ func NewProductCategory(name, description string) *ProductCategory {
 }
 
 type Product struct {
+	ID          int       `json:"id" db:"id"`
 	Name        string    `json:"name" db:"name"`
 	Description string    `json:"description" db:"description"`
 	SKU         string    `json:"sku" db:"sku"`
@@ -52,6 +54,7 @@ func NewProduct(name, description, sku string, category, price int) *Product {
 }
 
 type ProductInventory struct {
+	ID        int       `json:"id" db:"id"`
 	ProductId int       `json:"product_id" db:"product_id"`
 	Quantity  int       `json:"quantity" db:"quantity"`
 	Status    string    `json:"status" db:"status"`
